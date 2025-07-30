@@ -9,7 +9,7 @@
     gnome.gnome-terminal
     gnome.nautilus
     gnome.gnome-control-center
-    gnome.gedit
+    gedit
   ];
 
   # Optional: enable systemd user services for GNOME
