@@ -20,7 +20,7 @@
         specialArgs = {
           inherit pkgs;
           unstable = import nixpkgs-unstable { inherit system; };
-          hyprland;
+          inherit hyprland;
         };
         modules = [
           ./hosts/default.nix
