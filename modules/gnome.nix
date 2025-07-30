@@ -5,11 +5,11 @@
   services.gnome.gnome-keyring.enable = true;
 
   # Add GNOME apps you want here:
-  environment.systemPackages = with pkgs.gnome; [
-    gnome-terminal
-    nautilus
-    gnome-control-center
-    gedit
+  environment.systemPackages = with pkgs; [
+    gnome.gnome-terminal
+    gnome.nautilus
+    gnome.gnome-control-center
+    gnome.gedit
   ];
 
   # Optional: enable systemd user services for GNOME
