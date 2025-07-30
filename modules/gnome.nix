@@ -17,7 +17,7 @@
     "gnome-keyring-daemon" = {
       description = "GNOME Keyring Daemon";
       wantedBy = [ "default.target" ];
-      serviceConfig.ExecStart = "${pkgs.gnome_keyring}/bin/gnome-keyring-daemon --start --foreground --components=secrets";
+      serviceConfig.ExecStart = "${pkgs.gnome.gnome_keyring}/bin/gnome-keyring-daemon --start --foreground --components=secrets";
     };
   };
 }
