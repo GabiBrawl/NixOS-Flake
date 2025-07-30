@@ -13,7 +13,7 @@
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, hyprland, ... }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; } };
     in {
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         inherit system;
