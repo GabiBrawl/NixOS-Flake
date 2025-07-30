@@ -18,6 +18,6 @@
   systemd.user.services."gnome-keyring-daemon" = {
     description = "GNOME Keyring Daemon";
     wantedBy = [ "default.target" ];
-    serviceConfig.ExecStart = "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon --start --foreground --components=secrets";
+    serviceConfig.ExecStart = "${pkgs.gnome.gnome-keyring}/bin/gnome-keyring-daemon --start --foreground --components=secrets";
   };
 }
