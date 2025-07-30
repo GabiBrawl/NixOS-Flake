@@ -1,11 +1,19 @@
-{ config, pkgs, unstable, hyprland, ... }:
+{ config, pkgs, ... }:
 
-{
-  programs.hyprland.enable = true;
-
+let
+  hyprlandSession = ''
+    [Desktop Entry]
+    Name=Hyprland
+    Comment=Hyprland Wayland Compositor
+    Exec=Hyprland
+    TryExec=Hyprland
+    Type=Application
+    DesktopNames=Hyprland
+    Keywords=tiling;wm;wayland;
+  '';
+in {
   environment.systemPackages = with pkgs; [
     hyprland
-    hyprpaper
     waybar
     wofi
     swww
@@ -18,13 +26,11 @@
     pulseaudio
   ];
 
-  # Set Hyprland as a login option at GDM
-  services.xserver.windowManager.hyprland.enable = true;
+  # Create the session file so GDM can see Hyprland
+  environment.etc."xdg/autostart/hyprland.desktop".text = hyprlandSession;
 
-  # Enable pulseaudio for sound
+  # Sound and network
   sound.enable = true;
   hardware.pulseaudio.enable = true;
-
-  # Enable NetworkManager for connectivity (already in base, but safer)
   networking.networkmanager.enable = true;
 }
