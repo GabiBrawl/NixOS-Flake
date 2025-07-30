@@ -19,7 +19,7 @@ in {
     swww
     rofi
     jetbrains-mono
-    fontawesome      # <-- changed here
+    nerd-fonts-fontawesome      # <-- changed here
     alacritty
     kitty
     networkmanager
