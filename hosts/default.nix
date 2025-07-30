@@ -1,7 +1,7 @@
 { config, pkgs, unstable, hyprland, ... }:
 
 let
-  username = "gabiii";
+  username = "gabriel";
 in
 {
   imports = [
@@ -27,7 +27,7 @@ in
   };
 
   services.openssh.enable = true;
-  services.openssh.permitRootLogin = "no";
+  services.openssh.settings.PermitRootLogin = "no";
 
   networking.networkmanager.enable = true;
 
