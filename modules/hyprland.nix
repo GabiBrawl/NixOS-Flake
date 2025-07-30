@@ -13,17 +13,17 @@ let
   '';
 in {
   environment.systemPackages = with pkgs; [
-    pkgs.hyprland
-    pkgs.waybar
-    pkgs.wofi
-    pkgs.swww
-    pkgs.rofi
-    pkgs.ttf-jetbrains-mono
-    pkgs.ttf-font-awesome
-    pkgs.alacritty
-    pkgs.kitty
-    pkgs.networkmanager
-    pkgs.pulseaudio
+    hyprland
+    waybar
+    wofi
+    swww
+    rofi
+    jetbrains-mono      # changed here
+    ttf-font-awesome
+    alacritty
+    kitty
+    networkmanager
+    pulseaudio
   ];
 
   environment.etc."xdg/autostart/hyprland.desktop".text = hyprlandSession;
