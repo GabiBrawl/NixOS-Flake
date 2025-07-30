@@ -18,8 +18,8 @@ in {
     wofi
     swww
     rofi
-    jetbrains-mono      # changed here
-    ttf-font-awesome
+    jetbrains-mono
+    fontawesome      # <-- changed here
     alacritty
     kitty
     networkmanager
