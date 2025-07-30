@@ -4,7 +4,7 @@
   fonts.packages = with pkgs; [
     noto-fonts
     jetbrains-mono       # changed here too
-    ttf-font-awesome
+    fontawesome
   ];
 
   programs.zsh.enable = true;
