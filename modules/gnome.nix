@@ -6,7 +6,7 @@
 
   # Add GNOME apps you want here:
   environment.systemPackages = with pkgs; [
-    gnome-terminal
+    gnome.gnome-terminal
     nautilus
     gnome-control-center
     gedit
