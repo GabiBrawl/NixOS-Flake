@@ -20,8 +20,8 @@ in
     "${username}" = {
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" ];
-      openssh.authorizedKeys.keys = []; # Add your SSH keys here later if you want
-      initialPassword = "changeme"; # Please change after install
+      openssh.authorizedKeys.keys = [];
+      initialPassword = "changeme";
       shell = pkgs.zsh;
     };
   };
@@ -54,11 +54,11 @@ in
 
   fileSystems = {
     "/" = {
-      device = "/dev/sda2"; # Adjust this if your root partition is different
-      fsType = "ext4";      # Change to your root filesystem type if needed
+      device = "/dev/sda2"; # Adjust if different
+      fsType = "ext4";
     };
     "/boot" = {
-      device = "/dev/sda1"; # Adjust if your EFI partition differs
+      device = "/dev/sda1"; # Adjust if different
       fsType = "vfat";
     };
   };
