@@ -2,16 +2,16 @@
 
 {
   fonts.packages = with pkgs; [
-    noto-fonts
-    ttf-jetbrains-mono
-    ttf-font-awesome
+    pkgs.noto-fonts
+    pkgs.ttf-jetbrains-mono
+    pkgs.ttf-font-awesome
   ];
 
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
-    htop
-    tree
+    pkgs.htop
+    pkgs.tree
   ];
 
   services.printing.enable = true;
