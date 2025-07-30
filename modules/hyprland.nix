@@ -26,10 +26,8 @@ in {
     pulseaudio
   ];
 
-  # Create the session file so GDM can see Hyprland
   environment.etc."xdg/autostart/hyprland.desktop".text = hyprlandSession;
 
-  # Sound and network
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   networking.networkmanager.enable = true;
